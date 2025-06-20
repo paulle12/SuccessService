@@ -1,14 +1,15 @@
-# Base image with Java 21
+# Stage 1: Build
+FROM maven:3.9.6-eclipse-temurin-21-alpine AS build
+
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
+
+# Stage 2: Run
 FROM eclipse-temurin:21-jdk-alpine
 
-# Set working directory
 WORKDIR /app
+COPY --from=build /app/target/SuccessService-0.0.1-SNAPSHOT.jar app.jar
 
-# Copy the built JAR into the container
-COPY target/SuccessService-0.0.1-SNAPSHOT.jar app.jar
-
-# Expose the port the app runs on (can keep 8080 internally)
 EXPOSE 8080
-
-# Run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
