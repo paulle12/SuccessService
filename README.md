@@ -29,6 +29,8 @@ curl "https://raideriohydration.onrender.com/api/hydrate/character?region=us&rea
 Calculates a success score based on enrichment data.
 
 ```bash
+curl -X POST "https://successscorecalculationhydration.onrender.com/api/calculate/score?targetLevel=18" -H "Content-Type: application/json" -d "{\"recentRuns\":[],\"currentSeasonScore\":2500,\"previousSeasonScore\":2000,\"isMainRole\":true}"
+
 curl -X POST "https://successscorecalculationhydration.onrender.com/api/calculate/score?targetLevel=18" ^
   -H "Content-Type: application/json" ^
   -d "{\"recentRuns\":[],\"currentSeasonScore\":2500,\"previousSeasonScore\":2000,\"isMainRole\":true}"

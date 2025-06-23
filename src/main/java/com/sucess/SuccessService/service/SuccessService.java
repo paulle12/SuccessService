@@ -38,6 +38,7 @@ public class SuccessService {
             HydratedSuccessPlayer enrichedPlayer = new HydratedSuccessPlayer();
             enrichedPlayer.setName(raiderIOHydratedPlayer.getName());
             enrichedPlayer.setRealm(raiderIOHydratedPlayer.getRealm());
+            enrichedPlayer.setCharacterClass(raiderIOHydratedPlayer.getCharacterClass());
             enrichedPlayer.setRole(raiderIOHydratedPlayer.getRole());
             enrichedPlayer.setRecentRuns(raiderIOHydratedPlayer.getRecentRuns());
             enrichedPlayer.setCurrentSeasonScore(raiderIOHydratedPlayer.getCurrentSeasonScore());
