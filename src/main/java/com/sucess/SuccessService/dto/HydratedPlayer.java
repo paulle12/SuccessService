@@ -10,6 +10,7 @@ public class HydratedPlayer {
     private String characterClass;
     private String role;
     private Boolean isMainRole;
+    private String activeSpecRole;
 
     private List<Map<String, Object>> recentRuns;
 
@@ -22,7 +23,7 @@ public class HydratedPlayer {
 
     public HydratedPlayer(String name, String realm, String region, String characterClass, String role,
             List<Map<String, Object>> recentRuns,
-            Double currentSeasonScore, Double previousSeasonScore, Boolean isMainRole) {
+            Double currentSeasonScore, Double previousSeasonScore, Boolean isMainRole, String activeSpecRole) {
         this.name = name;
         this.realm = realm;
         this.region = region;
@@ -35,6 +36,14 @@ public class HydratedPlayer {
     }
 
     // Getters and setters
+    public String getActiveSpecRole() {
+        return activeSpecRole;
+    }
+
+    public void setActiveSpecRole(String activeSpecRole) {
+        this.activeSpecRole = activeSpecRole;
+    }
+
     public String getName() {
         return name;
     }

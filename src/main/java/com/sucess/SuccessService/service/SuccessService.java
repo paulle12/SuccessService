@@ -44,6 +44,7 @@ public class SuccessService {
             enrichedPlayer.setCurrentSeasonScore(raiderIOHydratedPlayer.getCurrentSeasonScore());
             enrichedPlayer.setPreviousSeasonScore(raiderIOHydratedPlayer.getPreviousSeasonScore());
             enrichedPlayer.setIsMainRole(raiderIOHydratedPlayer.getIsMainRole());
+            enrichedPlayer.setActiveSpecRole(raiderIOHydratedPlayer.getActiveSpecRole());
             enrichedPlayer.setScore(playerScore);
             return enrichedPlayer;
         }).collect(Collectors.toList());
