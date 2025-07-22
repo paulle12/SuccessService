@@ -16,7 +16,7 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                                 "http://localhost:3000", // Dev frontend
-                                "https://your-frontend-site.com" // Replace with your actual deployed frontend URL
+                                "https://party-ui-next.vercel.app" // Replace with your actual deployed frontend URL
                 )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*");
